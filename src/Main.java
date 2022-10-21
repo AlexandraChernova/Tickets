@@ -1,14 +1,8 @@
 public class Main {
-    public static void main(String[] args) {
-        int costOfTicket = 10_000;
-        int mile = 50;
-
-        int bonus = costOfTicket/mile;
-
-        System.out.println("Начислено "+bonus+" бонусных миль");
-
-        System.out.println("Спасибо, что выбрали нашу авиакомпанию!");
-
-
+    public static void main(String[] args){
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price);
+        System.out.println("Начислено " +miles+ " бонусных миль");
     }
 }
